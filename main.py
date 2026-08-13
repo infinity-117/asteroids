@@ -42,6 +42,7 @@ def main():
         dt = clock.tick(60) / 1000
         screen.fill("black")
         updatable.update(dt) #update method for the class called on all objects in the group
+        player.shot_cooldown_timer -= dt  # Decrease the cooldown timer by dt
 
         # check for collisions between player and asteroids
         for asteroid in asteroids:
